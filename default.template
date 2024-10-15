@@ -17,5 +17,6 @@ server {
     autoindex on;
     default_type text/plain;
     add_header 'Access-Control-Allow-Origin' '*';
+    proxy_pass http://0.0.0.0:3000;
   }
 }
