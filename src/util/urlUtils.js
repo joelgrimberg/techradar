@@ -6,7 +6,9 @@ function constructSheetUrl(sheetName) {
   const sheetUrl =
     noParamsUrl +
     '?' +
-    ((queryParams.documentId && `documentId=${encodeURIComponent(queryParams.documentId)}`) ||
+    ((queryParams.documentId &&
+      `documentId=https%3A%2F%2Fraw.githubusercontent.com%2Fjoelgrimberg%2Ftechradar%2Frefs%2Fheads%2Fmaster%2Ftest.json
+      `) ||
       (queryParams.sheetId && `sheetId=${encodeURIComponent(queryParams.sheetId)}`) ||
       '') +
     '&sheetName=' +

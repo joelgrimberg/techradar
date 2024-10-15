@@ -5,4 +5,7 @@ require('./analytics.js')
 
 const Factory = require('./util/factory')
 
-Factory().build()
+document.addEventListener('DOMContentLoaded', function () {
+  const factory = new Factory()
+  factory.build()
+})

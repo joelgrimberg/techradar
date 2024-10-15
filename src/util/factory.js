@@ -26,6 +26,7 @@ const { getGraphSize, graphConfig, isValidConfig } = require('../graphing/config
 const InvalidConfigError = require('../exceptions/invalidConfigError')
 const InvalidContentError = require('../exceptions/invalidContentError')
 const FileNotFoundError = require('../exceptions/fileNotFoundError')
+
 const plotRadar = function (title, blips, currentRadarName, alternativeRadars) {
   if (title.endsWith('.csv')) {
     title = title.substring(0, title.length - 4)
@@ -309,24 +310,9 @@ const Factory = function () {
       return
     }
 
-    window.addEventListener('keydown', function (e) {
-      if (featureToggles.UIRefresh2022 && e.key === '/') {
-        const inputElement =
-          d3.select('input.search-container__input').node() || d3.select('.input-sheet-form input').node()
-
-        if (document.activeElement !== inputElement) {
-          e.preventDefault()
-          inputElement.focus()
-          inputElement.scrollIntoView({
-            behavior: 'smooth',
-          })
-        }
-      }
-    })
-
     const domainName = DomainName(window.location.search.substring(1))
-
     const paramId = getDocumentOrSheetId()
+
     if (paramId && paramId.endsWith('.csv')) {
       sheet = CSVDocument(paramId)
       sheet.init().build()
@@ -338,23 +324,10 @@ const Factory = function () {
       sheet = GoogleSheet(paramId, sheetName)
       sheet.init().build()
     } else {
-      if (!featureToggles.UIRefresh2022) {
-        document.body.style.opacity = '1'
-        document.body.innerHTML = ''
-        const content = d3.select('body').append('div').attr('class', 'input-sheet')
-        plotLogo(content)
-        const bannerText =
-          '<div><h1>Build your own radar</h1><p>Once you\'ve <a href ="https://www.thoughtworks.com/radar/byor">created your Radar</a>, you can use this service' +
-          ' to generate an <br />interactive version of your Technology Radar. Not sure how? <a href ="https://www.thoughtworks.com/radar/byor">Read this first.</a></p></div>'
-
-        plotBanner(content, bannerText)
-
-        plotForm(content)
-
-        plotFooter(content)
-      }
-
-      setDocumentTitle()
+      // Default to loading test.json if no input is provided
+      const defaultJsonUrl = 'https://raw.githubusercontent.com/joelgrimberg/techradar/refs/heads/master/test.json'
+      sheet = JSONFile(defaultJsonUrl)
+      sheet.init().build()
     }
   }
 
@@ -390,7 +363,7 @@ function plotLogo(content) {
   content
     .append('div')
     .attr('class', 'input-sheet__logo')
-    .html('<a href="https://www.thoughtworks.com"><img src="/images/tw-logo.png" alt="logo"/ ></a>')
+    .html('<a href="https://www.thoughtworks.com"><img src="images/tw-logo.png" alt="logo"/ ></a>')
 }
 
 function plotFooter(content) {
