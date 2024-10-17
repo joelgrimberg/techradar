@@ -7,7 +7,7 @@ function constructSheetUrl(sheetName) {
     noParamsUrl +
     '?' +
     ((queryParams.documentId &&
-      `documentId=https%3A%2F%2Fraw.githubusercontent.com%2Fjoelgrimberg%2Ftechradar%2Frefs%2Fheads%2Fmaster%2Ftest.json
+      `documentId=https%3A%2F%2Fraw.githubusercontent.com%2Fjoelgrimberg%2Ftechradar%2Frefs%2Fheads%2Fmaster%2Fradar.json
       `) ||
       (queryParams.sheetId && `sheetId=${encodeURIComponent(queryParams.sheetId)}`) ||
       '') +
