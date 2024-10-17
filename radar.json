@@ -1,30 +1,315 @@
 [
   {
-    "name": "Composer",
-    "ring": "adopt",
-    "quadrant": "tools",
-    "isNew": "TRUE",
-    "description": "Although the idea of dependency management ..."
-  },
-  {
-    "name": "Canary builds",
-    "ring": "trial",
-    "quadrant": "techniques",
+    "name": "WebdriverIO",
+    "ring": "Adopt",
+    "quadrant": "languages-and-frameworks",
     "isNew": "FALSE",
-    "description": "Many projects have external code dependencies ..."
+    "status": "Moved In",
+    "description": "WebdriverIO is an advanced, open-source automation framework built on the W3C WebDriver standard, ensuring compatibility with unmodified browsers and cross-platform testing. It supports desktop and mobile web, native mobile apps, Electron apps, and can be run on emulators, simulators, real devices, or virtual machines. With its adherence to standards, WebdriverIO is a reliable and future-proof tool for cross-platform automation.</p>\n<br/>\n<p><strong>Pros:</strong></p>\n<ul>\n  <li><strong>Standards-based compatibility:</strong> WebdriverIO adheres to W3C standards, ensuring reliability across unmodified browsers and devices.</li>\n  <li><strong>Wide range of integrations:</strong> It offers numerous plugins, services, and reporters, enabling easy customization and smooth CI/CD integration.</li>\n  <li><strong>BiDi protocol support:</strong> The addition of the BiDi protocol allows for real-time communication between browser and test environment, introducing advanced features.</li>\n</ul>\n<br/><br/>\n<p><strong>Cons:</strong></p>\n<ul>\n  <li><strong>Steep learning curve:</strong> The framework can be more difficult to learn compared to newer tools like Cypress and Playwright, which might be easier for beginners.</li>\n  <li><strong>QA-centric limitations:</strong> While powerful, WebdriverIO may require more setup and maintenance, particularly for teams without strong development skills.</li>\n</ul>\n<br/><br/>\n<p><strong>Conclusion:</strong><br />\nWebdriverIO is a great choice for teams that need a cross-platform automation framework that adheres to industry standards. While the learning curve can be steeper, its stability, wide range of integrations, and community support make it a strong option for QA and development teams focused on long-term, standards-based automation strategies. We recommend adopting WebdriverIO if you seek a future-proof and versatile automation solution.</p>"
   },
   {
-    "name": "Apache Kylin",
-    "ring": "assess",
-    "quadrant": "platforms",
-    "isNew": "TRUE",
-    "description": "Apache Kylin is an open source analytics solution ..."
-  },
-  {
-    "name": "JSF",
-    "ring": "hold",
-    "quadrant": "languages & frameworks",
+    "name": "Playwright",
+    "ring": "Adopt",
+    "quadrant": "languages-and-frameworks",
     "isNew": "FALSE",
-    "description": "We continue to see teams run into trouble using JSF ..."
+    "status": "Moved In",
+    "description": "Playwright, released in January 2020, has quickly established itself as a strong alternative to tools like Cypress. It supports all major browser engines, operating systems, and programming languages. What sets Playwright apart are its automatic waiting features and web-first assertions. \nPro’s:\nActionability checks before interacting with elements, includes auto-waiting\nWeb first assertions automatically retry the assertion until condition is met reducing flakyness.\n\nCon’s:\nUses modified browser engines, not real browsers.\nLimited support for component tests.\n\nPlaywright is an excellent conder for E2E style tests with it’s automatic waiting capabilities and web first assertions as well as network interception, mocking and tracing capabilities.\n"
+  },
+  {
+    "name": "Cypress",
+    "ring": "Hold",
+    "quadrant": "languages-and-frameworks",
+    "isNew": "FALSE",
+    "status": "No Change",
+    "description": "<p>Until April 2024 Cypress was the most downloaded e2e testing tool according to npmtrends.com. Of course, downloads don’t tell us anything about how intensively people are using it. There still seems to be a lot of interest in learning how to use Cypress. <br><br>This commercially (and well) maintained tool has initially not many features behind their paywall. Everything you need (to get started) is out there for free and documentation is really extensive and easy to use. However, when you get to the point of scaling e2e testing and running tests in parallel in CI/CD, you will want (or need) to have a Cypress Cloud subscription to make it all integrate. This is the biggest downside to Cypress.<br><br>To start automating your e2e (or component) tests is really easy with Cypress. You don’t even have to be familiar with Javascript/Typescript or the NodeJS runtime in order to start automating tests which makes it a perfect tool for ‘test engineers’ interested in test automation. This is a big pro for any (JS/TS) beginner, because you don’t need to learn concepts like asynchronous coding (promises, callbacks, async/await) to start automating e2e tests.</p> <br><br><p>Why 'Hold' ring? We believe using Cypress in a CI/CD practice with many builds/deployments a day Cypress could cause a bottleneck for your leadtime. Teste can't run (out of the box) in parallel, unless you start paying...</p>"
+  },
+  {
+    "name": "Appium",
+    "ring": "Adopt",
+    "quadrant": "languages-and-frameworks",
+    "isNew": "FALSE",
+    "status": "No Change",
+    "description": "In a landscape often dominated by platform-specific tools like Espresso and XCUITest, Appium stands out as a versatile, cross-platform automation tool that operates as a black-box testing tool. Unlike some competitors, Appium interacts with applications as a user would, without requiring access to the app's source code, making it a powerful option for comprehensive end-to-end testing.</p>\n<br />\n<p><strong>Pros:</strong></p>\n<ul>\n  <li><strong>Cross-platform flexibility:</strong> Appium supports both Android and iOS platforms, making it a versatile tool for mobile automation.</li>\n  <li><strong>Language variety:</strong> It supports multiple languages (JavaScript, TypeScript, Java, Ruby, Python), catering to QA engineers with diverse skill sets.</li>\n  <li><strong>Black-box testing:</strong> As a black-box tool, it simulates user interactions without requiring access to source code, enabling comprehensive testing.</li>\n</ul>\n<br /><br />\n<p><strong>Cons:</strong></p>\n<ul>\n  <li><strong>Not a framework:</strong>Appium is not a framework, but a <em>robot</em>. It represents the part of a framework responsible for executing the automated tasks. It coordinates test execution, but you must still build the reporting/configuration/orchestration.</li>\n  <li><strong>Challenging learning curve:</strong> Appium can be difficult to learn, especially for teams without prior experience in automation.</li>\n  <li><strong>QA-centric focus:</strong> While great for QA teams, developers may prefer more integrated tools like Espresso or XCUITest, which offer deeper control.</li>\n</ul>\n<br /><br />\n<p><strong>Conclusion:</strong><br />\nAppium is an excellent choice for QA teams looking for a cross-platform, black-box testing tool. It is fully open-source and adheres to W3C WebDriver standards, making it reliable and future-proof. However, development-heavy teams might benefit more from exploring Espresso or XCUITest, which provide deeper integration into the development process. For QA-focused teams, Appium remains a highly recommended option for standard-based mobile automation.</p>"
+  },
+  {
+    "name": "XCUITest",
+    "ring": "Adopt",
+    "quadrant": "languages-and-frameworks",
+    "isNew": "FALSE",
+    "status": "No Change",
+    "description": "XCUITest is a robust, developer-focused testing framework designed specifically for iOS applications. Similar to Espresso for Android, XCUITest requires direct access to the app's source code, making it crucial for teams to have a deep understanding of the app’s structure and flow.</p>\n<br />\n<p><strong>Pros:</strong></p>\n<ul>\n  <li><strong>Deep code integration:</strong> XCUITest requires access to the app’s source code, allowing for precise, code-level tests tailored to the app’s architecture.</li>\n  <li><strong>Swift and Objective-C support:</strong> It integrates tightly with iOS development by using the same languages as the app, providing consistency in the development and testing process.</li>\n  <li><strong>Xcode integration:</strong> XCUITest is fully integrated with Apple’s Xcode, enabling fast and reliable testing directly on the iOS UI layer.</li>\n</ul>\n<br /><br />\n<p><strong>Cons:</strong></p>\n<ul>\n  <li><strong>Developer-centric:</strong> XCUITest is primarily designed for developers, and teams composed of QA engineers might struggle with the code access requirements.</li>\n  <li><strong>Requires programming skills:</strong> Teams need to be proficient in Swift or Objective-C, which may present a challenge for those unfamiliar with iOS development.</li>\n</ul>\n<br /><br />\n<p><strong>Conclusion:</strong><br />\nXCUITest is an ideal solution for development-heavy teams that require rigorous, code-level testing of iOS applications. Its tight integration with Xcode and reliance on Swift or Objective-C makes it a powerful tool for developers, but it may not be suitable for QA teams without programming experience. For iOS projects needing precise, developer-driven testing, XCUITest is a top recommendation.</p>"
+  },
+  {
+    "name": "Espresso",
+    "ring": "Adopt",
+    "quadrant": "languages-and-frameworks",
+    "isNew": "FALSE",
+    "status": "No Change",
+    "description": "Espresso is a powerful, developer-centric testing framework designed specifically for Android applications. Unlike black-box tools like Appium, Espresso requires direct access to the source code, making it essential for teams to have a deep understanding of the app's internal structure and flow.</p>\n<br />\n<p><strong>Pros:</strong></p>\n<ul>\n  <li><strong>Deep code integration:</strong> Espresso requires access to the app's source code, allowing for highly accurate tests that align closely with the app’s architecture.</li>\n  <li><strong>Java and Kotlin support:</strong> Espresso utilizes the primary languages of Android development, providing consistency in testing and development.</li>\n  <li><strong>Fast, reliable feedback:</strong> Tight integration with Android's development environment ensures immediate feedback and precise control over UI interactions.</li>\n</ul>\n<br /><br />\n<p><strong>Cons:</strong></p>\n<ul>\n  <li><strong>Developer-centric:</strong> Espresso is best suited for developer-heavy teams, making it less accessible for teams focused primarily on QA.</li>\n  <li><strong>Requires programming skills:</strong> Teams need proficiency in Java or Kotlin, which can be a barrier for those not familiar with Android development.</li>\n</ul>\n<br /><br />\n<p><strong>Conclusion:</strong><br />\nEspresso is an excellent choice for developer-heavy teams looking to implement rigorous, code-level testing within their Android projects. Its deep integration with the app’s architecture and Android’s development environment makes it a powerful tool, but it may not be the best option for QA teams lacking programming expertise. For teams seeking precise, developer-driven testing, Espresso is a top recommendation.</p>\n"
+  },
+  {
+    "name": "Puppeteer",
+    "ring": "Hold",
+    "quadrant": "languages-and-frameworks",
+    "isNew": "FALSE",
+    "status": "Moved Out",
+    "description": "Puppeteer, actively developed by Google and first released in January 2018, has been a popular choice for various types of browser automation. However, its browser support is limited to Chrome for Testing and Firefox. At its core, Puppeteer excels in browser automation but requires additional libraries like Mocha and Chai to be fully suited for comprehensive test automation.\n\nPro’s:\nRich tracing capabilities (similar to playwright)\nSupport for Webdriver BiDi\n\nCon’s:\nLimited browser support\nRequires additional tools to be fully usable as a test automation tool\n\nPuppeteer’s limited browser support and the necessity of integrating additional libraries for full testing capabilities can be restrictive. As a result, for new projects, there are often better alternatives available that provide broader browser support and more integrated features. Tools like Playwright, which supports multiple browsers out of the box, may offer a more comprehensive solution for modern test automation needs.\n"
+  },
+  {
+    "name": "AssertJ",
+    "ring": "Trial",
+    "quadrant": "languages-and-frameworks",
+    "isNew": "FALSE",
+    "status": "FALSE",
+    "description": "<p>AssertJ is library that provides fluent assertions for tests in Java. Using AssertJ makes unit tests easier to read, while its error messages help identify where the actual results differ from the expectation.</p>\n<p>While AssertJ is already widely adopted, we recommend everyone working with it to learn about its lesser known features like custom Assertions (great for domain-specific assertions) and Conditions.</p>"
+  },
+  {
+    "name": "rest-assured.net",
+    "ring": "Assess",
+    "quadrant": "languages-and-frameworks",
+    "isNew": "FALSE",
+    "status": "FALSE",
+    "description": "Bas Dijkstra’s C#/.NET implementation of the famous library for testing REST APIs in Java. It appears to be a welcome newcomer to the ecosystem. It is still relatively young but has been in rapid development since its inception. Also, it is free and open source."
+  },
+  {
+    "name": "Wiremock",
+    "ring": "Adopt",
+    "quadrant": "FALSE",
+    "isNew": "FALSE",
+    "status": "FALSE",
+    "description": "FALSE"
+  },
+  {
+    "name": "TestCafe",
+    "ring": "Hold",
+    "quadrant": "languages-and-frameworks",
+    "isNew": "FALSE",
+    "status": "Moved Out",
+    "description": "Niet meer aan beginnen, betere alternatieven "
+  },
+  {
+    "name": "Robot Framework",
+    "ring": "Adopt",
+    "quadrant": "languages-and-frameworks",
+    "isNew": "FALSE",
+    "status": "FALSE",
+    "description": "<p>Robot Framework is an open source automation framework for test automation. Is widely used in the industry and there are many libraries developed to enhance its functionality in Python, Java and other languages. </p> <ol><li>+ human-friendly syntax that makes the communication with the stakeholders easier </li>\n<li>+ easy to integrate with Python or Java </li>\n<li>+ big community of contributors willing to support </li>"
+  },
+  {
+    "name": "Selenium",
+    "ring": "Hold",
+    "quadrant": "languages-and-frameworks",
+    "isNew": "FALSE",
+    "status": "No Change",
+    "description": "\nSelenium, actively developed by the Selenium Project and first released in 2004, has long been a cornerstone of web automation. Unlike some newer tools, Selenium boasts extensive browser support, including Chrome, Firefox, Safari, Edge, and Internet Explorer, making it a versatile choice for cross-browser testing. At its core, Selenium excels in automating web applications and supports multiple programming languages such as Java, C#, Python, Ruby, JavaScript, and Kotlin, making it highly accessible to developers with varied expertise.\n\nPros:\nCompliant with W3C standards\nCross browser support\nWebdriver BiDi support is coming\nLarge community\n\nCon’s:\nRequires additional tooling to be fully usable as a test automation tool\nNot as intuitive as some competitors\n\nSelenium remains a strong choice due to its broad browser support, mature ecosystem, and extensive community resources. For projects requiring extensive cross-browser testing and leveraging a well-established framework, Selenium is a highly viable option. However, for new projects seeking built-in support for modern web features and more streamlined interactions, tools like Playwright might offer a more comprehensive solution for contemporary test automation needs.\n"
+  },
+  {
+    "name": "Sauce Labs",
+    "ring": "Hold",
+    "quadrant": "Platforms",
+    "isNew": "FALSE",
+    "status": "No Change",
+    "description": "<p>Run Forrest, <strong>RUN</strong>, it's dying</p>"
+  },
+  {
+    "name": "Vercel",
+    "ring": "Adopt",
+    "quadrant": "Platforms",
+    "isNew": "FALSE",
+    "status": "FALSE",
+    "description": "FALSE"
+  },
+  {
+    "name": "Cucumber",
+    "ring": "Hold",
+    "quadrant": "Techniques",
+    "isNew": "FALSE",
+    "status": "Moved Out",
+    "description": "<p>Aquired by Smartbear a few years ago, they kicked out the last developer, so it's not maintained anymore. Please don't use it anymore because it sucks like...</p>"
+  },
+  {
+    "name": "Contract Testing",
+    "ring": "Assess",
+    "quadrant": "Techniques",
+    "isNew": "FALSE",
+    "status": "Moved In",
+    "description": "FALSE"
+  },
+  {
+    "name": "BDD",
+    "ring": "Hold",
+    "quadrant": "Techniques",
+    "isNew": "FALSE",
+    "status": "No Change",
+    "description": "FALSE"
+  },
+  {
+    "name": "TDD",
+    "ring": "Assess",
+    "quadrant": "Techniques",
+    "isNew": "FALSE",
+    "status": "No Change",
+    "description": "FALSE"
+  },
+  {
+    "name": "Visual Regression Testing",
+    "ring": "Hold",
+    "quadrant": "Techniques",
+    "isNew": "FALSE",
+    "status": "No Change",
+    "description": "<p>Is there a future in (AI driven) visual regression testing? Or are we still just scratching the surface of a technique not yet completely adopted</p>"
+  },
+  {
+    "name": "PBT (property-based testing)",
+    "ring": "Trial",
+    "quadrant": "Techniques",
+    "isNew": "FALSE",
+    "status": "No Change",
+    "description": "FALSE"
+  },
+  {
+    "name": "Mutation testing",
+    "ring": "Hold",
+    "quadrant": "Techniques",
+    "isNew": "FALSE",
+    "status": "No Change",
+    "description": "FALSE"
+  },
+  {
+    "name": "Shift Left",
+    "ring": "Adopt",
+    "quadrant": "Techniques",
+    "isNew": "FALSE",
+    "status": "FALSE",
+    "description": "FALSE"
+  },
+  {
+    "name": "Shift Right",
+    "ring": "Trial",
+    "quadrant": "Techniques",
+    "isNew": "FALSE",
+    "status": "FALSE",
+    "description": "FALSE"
+  },
+  {
+    "name": "Component testing",
+    "ring": "Trial",
+    "quadrant": "Techniques",
+    "isNew": "FALSE",
+    "status": "FALSE",
+    "description": "FALSE"
+  },
+  {
+    "name": "Observability",
+    "ring": "Adopt",
+    "quadrant": "Techniques",
+    "isNew": "FALSE",
+    "status": "FALSE",
+    "description": "FALSE"
+  },
+  {
+    "name": "AI Assistant (Jetbrains)",
+    "ring": "Trial",
+    "quadrant": "Tools",
+    "isNew": "TRUE",
+    "status": "Moved In",
+    "description": "FALSE"
+  },
+  {
+    "name": "ChatGPT (for testing)",
+    "ring": "Trial",
+    "quadrant": "Tools",
+    "isNew": "FALSE",
+    "status": "Moved In",
+    "description": "FALSE"
+  },
+  {
+    "name": "Copilot (for testing)",
+    "ring": "Assess",
+    "quadrant": "Tools",
+    "isNew": "TRUE",
+    "status": "No Change",
+    "description": "FALSE"
+  },
+  {
+    "name": "EqualsVerifier",
+    "ring": "Adopt",
+    "quadrant": "Tools",
+    "isNew": "FALSE",
+    "status": "FALSE",
+    "description": "FALSE"
+  },
+  {
+    "name": "Spectral",
+    "ring": "Trial",
+    "quadrant": "Tools",
+    "isNew": "FALSE",
+    "status": "FALSE",
+    "description": "FALSE"
+  },
+  {
+    "name": "Testcontainers",
+    "ring": "Adopt",
+    "quadrant": "Tools",
+    "isNew": "FALSE",
+    "status": "FALSE",
+    "description": "FALSE"
+  },
+  {
+    "name": "Postman",
+    "ring": "Hold",
+    "quadrant": "Tools",
+    "isNew": "FALSE",
+    "status": "FALSE",
+    "description": "In de context van CI/CD zou het niet de allerbeste keuze zijn, daarom op on hold, voor de rest (handmatig) misschien op \"adopt\" (misschien ook benoemen in de naam (Postman CICD + Postman Manual)"
+  },
+  {
+    "name": "Insomnia",
+    "ring": "Hold",
+    "quadrant": "Tools",
+    "isNew": "FALSE",
+    "status": "FALSE",
+    "description": "FALSE"
+  },
+  { "name": "Yaak", "ring": "Trial", "quadrant": "Tools", "isNew": "FALSE", "status": "FALSE", "description": "FALSE" },
+  {
+    "name": "Storybook",
+    "ring": "Trial",
+    "quadrant": "Tools",
+    "isNew": "TRUE",
+    "status": "Moved In",
+    "description": "Storybook is a frontend workshop for building UI components and pages in isolation. Storybook can be used with React, Vue, Angular, Web Components and more. Storybook then serves as a library of components that various stakeholders can interact with. \n\nPro's:\n* Develop components in isolation, no need to spin up an entire app\n* Reduce effort for creating a large number of apps that have a similar look, feel and UI featureset\n* Standardized UI Components are incredbly helpful for Test Automation Engineers!\n\nCon's:\n* Usually, creating a UI library is fairly expensive and only viable when creating a multiple applications\n* Initial setup tends to be challenging, Storybook has a steep learning curve\n\nEspecially in larger companies, Storybook can provide a lot of value and reusability but it's doesn't come without an investment. For larger projects we would recommend checking out Storybook, for projects with only a few applications it is likely not worth the effort."
+  },
+  {
+    "name": "Chromatic",
+    "ring": "Assess",
+    "quadrant": "Tools",
+    "isNew": "FALSE",
+    "status": "FALSE",
+    "description": "Chromatic is a SaaS service that offloads the vast majority of effort for Visual Regression Testing. By automatically creating snapshots for every single story in Storybook and providing  developers with an easy and intuitive interface to detect and accept changes. a free tier is available \n\nPro's:\n* Automatically generate tests for each individual story with Storybook\n* Updating snapshots is extremely easy and does not require jumping through hoops with docker containers.\n* Setup is extremely easy and straight forward\n\nCon's:\n* Requires a subscription to unlock full feature set.\n* Specifically integrates with Storybook\n* Free tier only supports Chrome, payed subscription required for Edge, Firefox and Safari.\n\n\nIf you're already using Storybook, checking out Chromatic seems like a no-brainer.  It'll give you instant access to visual regression testing with a limited amount of effort. If you start small you might even be able to work with the free tier!\n\n"
+  },
+  {
+    "name": "Argo CD",
+    "ring": "Adopt",
+    "quadrant": "FALSE",
+    "isNew": "FALSE",
+    "status": "FALSE",
+    "description": "ArgoCD is a Continuous Deployment tool for Kubernetes. Unlike other tools that generally use a push mechanism to deploy, ArgoCD can also pull in updated deployments from remote repositories and directly update them in a Kubernetes namespace. It allows DevOps teams to implement GitOps. \n\nPro's:\n* Actively monitor deployments for desired updates and automatically deploy them\n* Easy Rollbacks to previous states\n\nCon:\n* Scaling Argo can become quite complex\n* ArgoCD only on monitor resources it deploys, not resources managed by those deployed resources\n\nEven though ArgoCD does come with it's challenges, it's GitOps style way of working and integration with Helm and Kustomize make it an excellent kandidate for those having to manage a large number of deployments on kubernetes clusters. "
+  },
+  {
+    "name": "ReportPortal",
+    "ring": "FALSE",
+    "quadrant": "FALSE",
+    "isNew": "FALSE",
+    "status": "FALSE",
+    "description": "FALSE"
+  },
+  {
+    "name": "BackstopJS",
+    "ring": "FALSE",
+    "quadrant": "FALSE",
+    "isNew": "FALSE",
+    "status": "FALSE",
+    "description": "FALSE"
   }
 ]
