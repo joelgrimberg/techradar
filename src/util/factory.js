@@ -324,7 +324,7 @@ const Factory = function () {
       sheet = GoogleSheet(paramId, sheetName)
       sheet.init().build()
     } else {
-      const defaultJsonUrl = 'https://raw.githubusercontent.com/joelgrimberg/techradar/refs/heads/master/radar.json'
+      const defaultJsonUrl = 'https://raw.githubusercontent.com/Test-Automation-Group-NL/techradar/refs/heads/master/radar.json'
       sheet = JSONFile(defaultJsonUrl)
       sheet.init().build()
     }
