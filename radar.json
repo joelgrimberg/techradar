@@ -1,5 +1,22 @@
 [
   {
+    "name": "Jenkins",
+    "ring": "Hold",
+    "quadrant": "Platforms",
+    "isNew": "FALSE",
+    "status": "No Change",
+    "description": "Jenkins is a widely used CI tool that has been around for a long time. It is a in essence a very powerful tool that can be used to automate almost anything. However, it is also a very complex tool that can be difficult to maintain and scale. These days there are better tools suited for CICD pipelines that are easier to maintain and scale.<p><strong>Pros:</strong></p>
+    - It can be used on premise
+    <p><strong>Cons:</strong></p>
+    - It is difficult to maintain
+    - it is very costly to maintain
+    - it is hard to scale
+    - it is hard to integrate with other tools
+    - it has a bad Developer Experience
+    <p><strong>Conclusion:</strong></p>
+    Because of it's complexity and the fact that there are better tools available, we recommend not to start new projects with Jenkins. For existing projects we recommend move away from Jenkins to a more modern tool"
+  },
+  {
     "name": "WebdriverIO",
     "ring": "Adopt",
     "quadrant": "languages-and-frameworks",
